@@ -203,8 +203,8 @@ Yes, per API key. Contact us if you need a higher limit.
 ## Contact
 
 - 🌐 Website: [www.tiam.codes][home]
-- 📧 Email: `TODO@your-domain`
-- 💬 Telegram: `TODO`
+- 📧 Email: `529828069@qq.com`
+- 💬 Telegram: `seencx`
 
 ---
 
