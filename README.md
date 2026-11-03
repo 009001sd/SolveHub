@@ -4,7 +4,7 @@
   <img src="https://www.tiam.codes/favicon.svg" alt="SolveHub" width="88" height="88">
 </a>
 
-# SolveHub — CAPTCHA Solver Api
+# SolveHub — CAPTCHA Solver API
 
 **One REST endpoint for Cloudflare Turnstile, DataDome, Akamai, PerimeterX, Imperva, AWS WAF, FunCaptcha, Alibaba Cloud CAPTCHA and image OCR.**
 Pay only for solved tasks.
