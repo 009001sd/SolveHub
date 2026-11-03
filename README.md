@@ -9,6 +9,8 @@
 **One REST endpoint for Cloudflare Turnstile, DataDome, Akamai, PerimeterX, Imperva, AWS WAF, FunCaptcha, Alibaba Cloud CAPTCHA and image OCR.**
 Pay only for solved tasks.
 
+**Try it first — link your Telegram account to receive $0.10 in trial credit. Trial access allows one concurrent task.**
+
 [![Docs](https://img.shields.io/badge/docs-tiam.codes-2563eb?style=flat-square)][docs]
 [![Pricing](https://img.shields.io/badge/from-%240.20%20%2F%201k%20solves-16a34a?style=flat-square)][prices]
 [![API](https://img.shields.io/badge/API-REST%20%2B%20JSON-0f172a?style=flat-square)][api]
@@ -24,6 +26,7 @@ English · [简体中文](#简体中文) · [日本語](#日本語)
 
 ## Why SolveHub
 
+- **Try before you top up** — link your Telegram account to receive $0.10 in trial credit. Trial concurrency is limited to 1.
 - **One API, every challenge** — the same `POST /v1/tasks` call works for tokens (Turnstile, FunCaptcha), cookie-based anti-bot (DataDome, Akamai, PerimeterX, Imperva, AWS WAF) and image text.
 - **Pay per success** — each task's price is frozen at creation and charged only when it completes. Failed or cancelled tasks are refunded automatically.
 - **Safe retries** — every create request takes an `Idempotency-Key`, so a network timeout never turns into a duplicate charge.
@@ -51,7 +54,9 @@ English · [简体中文](#简体中文) · [日本語](#日本語)
 
 ## Quick start
 
-**1. Get an API key** — [create an account][register], then bind the API key you receive from us and top up your balance.
+**1. Set up your account** — [create an account][register], then bind the API key you receive from us. Link your Telegram account to receive **$0.10 in trial credit**, or top up your balance.
+
+> **Trial limit:** one task at a time. Wait until the current task reaches `completed`, `failed` or `cancelled` before creating another. If its status is `uncertain`, keep polling the same task ID.
 
 **2. Create a task**
 
@@ -180,6 +185,10 @@ console.log(cookies, useragent);
 
 ## FAQ
 
+<details><summary><b>Can I try SolveHub before topping up?</b></summary>
+Yes. Link your Telegram account to receive <b>$0.10 in trial credit</b>. Trial access is limited to <b>one concurrent task</b>, so you can run one task at a time. Top up your balance to continue once your trial credit is used up.
+</details>
+
 <details><summary><b>Is there an SDK?</b></summary>
 Not needed — it's two HTTP calls. Copy the Python or Node.js helper above. The machine-readable OpenAPI contract is linked from the <a href="https://www.tiam.codes/docs/api?utm_source=github&utm_medium=readme">API reference</a>.
 </details>
@@ -197,7 +206,7 @@ Yes. Register an HTTPS endpoint with <code>PUT /v1/webhook</code>; every event i
 </details>
 
 <details><summary><b>Is there a concurrency limit?</b></summary>
-Yes, per API key. Contact us if you need a higher limit.
+Yes. Trial access is limited to <b>one concurrent task</b>. Paid usage has per-API-key concurrency limits. Contact us if you need a higher limit.
 </details>
 
 ## Contact
@@ -212,17 +221,22 @@ Yes, per API key. Contact us if you need a higher limit.
 
 **SolveHub 是一个统一的验证码识别 API**：一个 REST 接口处理 Cloudflare Turnstile / 5 秒盾、DataDome、Akamai、PerimeterX、Imperva、AWS WAF、阿里云验证码 2.0、FunCaptcha 和图片验证码。
 
+- **支持试用**：绑定 Telegram 账户即可获得 **$0.10 试用额度**，试用并发上限为 **1**（同一时间最多运行一个任务）
 - 按**成功任务**计费，USD 计价；失败、取消自动退还预占金额
 - `Idempotency-Key` 幂等，网络超时重试不会重复扣费
 - 公开实时价格接口 `GET /v1/prices`，Turnstile 低至 **$0.20 / 千次**
 - 支持 Webhook 回调（HMAC 签名）或轮询
 - 中文控制台：API Key 管理、用量统计、账单流水、工单、两步验证
 
+**开始使用**：注册账户并绑定我们提供的 API Key，绑定 Telegram 账户领取试用额度，即可开始测试。试用额度用完后，可充值继续使用。
+
 👉 [中文文档](https://www.tiam.codes/zh/docs/?utm_source=github&utm_medium=readme&utm_campaign=zh) · [注册账户][register] · [实时价格](https://www.tiam.codes/zh/docs/prices?utm_source=github&utm_medium=readme&utm_campaign=zh)
 
 ## 日本語
 
 **SolveHub は CAPTCHA 解決 API です。** Cloudflare Turnstile、DataDome、Akamai、PerimeterX、Imperva、AWS WAF、FunCaptcha、画像 CAPTCHA に 1 つの REST エンドポイントで対応。成功したタスクのみ課金、コンソールは日本語対応。
+
+**トライアル対応**：Telegram アカウントを連携すると、**$0.10 分のトライアルクレジット**を受け取れます。トライアルでは同時に実行できるタスクは **1 件**です。クレジットを使い切った後は、残高をチャージして引き続き利用できます。
 
 👉 [日本語ドキュメント](https://www.tiam.codes/ja/docs/?utm_source=github&utm_medium=readme&utm_campaign=ja) · [アカウント作成][register]
 
